@@ -23,7 +23,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>(R.layout.activity_spl
         super.onCreate(savedInstanceState)
 
         viewModel.loaded.observe(this, {
-            // todo : Q3. it이 2라면 goToMain 함수를 실행해줍시다.
+            // todo : Q3. it이 true 라면 goToMain 함수를 실행해줍시다.
             //  이때, 차례대로 viewModel.subjectList, viewModel.lunchList 를 인수로 넣어주면 됩니다.
 
             // -------------------------------------------------

@@ -20,7 +20,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
         //todo : Q16. 이전 액티비티에서 전송한 데이터를 가져오려 합니다.
         // 알맞은 함수를 실행하세요.
-
+        getData()
 
         // -------------------------------------------------
         initActivity()
@@ -50,14 +50,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         val lunchAdapter = LunchAdapter()
 
         binding.recyclerMainTime.let {
-            //todo : Q17. 위 코드의 spanCount 숫자를 바꾸어보고, 숫자가 의미하는 것이 무엇일지 생각해봅시다.
+            //todo : Q17. 아래 코드의 spanCount 숫자를 바꾸어보고, 숫자가 의미하는 것이 무엇일지 생각해봅시다.
             it.layoutManager = GridLayoutManager(this, 2)
             // -------------------------------------------------
             it.adapter = subjectAdapter
         }
 
         val layoutManager = LinearLayoutManager(this)
-        //todo : Q18. 위 코드의 HORIZONTAL 을 VERTICAL 로 바꾸면 어떻게 될까요?
+        //todo : Q18. 아래 코드의 HORIZONTAL 을 VERTICAL 로 바꾸면 어떻게 될까요?
         // 한 번 예상해보고 코드를 바꿔 실행해 봅시다.
         layoutManager.orientation = LinearLayoutManager.HORIZONTAL
         // -------------------------------------------------

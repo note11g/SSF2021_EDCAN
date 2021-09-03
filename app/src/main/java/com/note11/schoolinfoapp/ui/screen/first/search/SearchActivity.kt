@@ -20,13 +20,13 @@ class SearchActivity : BaseActivity<ActivitySearchBinding>(R.layout.activity_sea
         binding.viewModel = viewModel
 
         //todo : Q5. RecyclerView 를 초기 설정하는 코드를 작성해주세요.
-
+        initRecyclerView()
         // -------------------------------------------------
         viewModel.searchQuery.observe(this, {
             val length = it.length
             //todo : Q6. 입력한 학교 이름의 길이(length)가 1 보다 길때 학교를 검색해줍시다.
             // 이때, 학교를 검색하는 함수는 viewModel.search() 입니다.
-
+            if (length > 1) viewModel.search()
             // -------------------------------------------------
         })
     }
@@ -36,7 +36,7 @@ class SearchActivity : BaseActivity<ActivitySearchBinding>(R.layout.activity_sea
             //todo: Q7. 여기는 학교를 선택했을 때(학교 버튼을 눌렀을 때) 실행되는 부분입니다.
             // it 이라는 변수를 SelectActivity 에 전달하고, 화면을 넘어가려 합니다.
             // 어떤 함수를 실행해야 할까요?
-
+            goToSelect(it)
             // -------------------------------------------------
         }
         rcvSearchList.layoutManager = LinearLayoutManager(this@SearchActivity)

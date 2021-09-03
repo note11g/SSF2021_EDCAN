@@ -35,7 +35,7 @@ class SelectActivity : BaseActivity<ActivitySelectBinding>(R.layout.activity_sel
 
             btnSelectNext.setOnClickListener {
                 // todo : Q8. 모두 입력되었는지 확인하는 함수를 실행합니다.
-
+                    checkSelect()
                 // -------------------------------------------------
             }
         }
@@ -52,14 +52,14 @@ class SelectActivity : BaseActivity<ActivitySelectBinding>(R.layout.activity_sel
 
         if (grade.isEmpty() || classNum.isEmpty()) {
             //todo : Q9. 입력을 하라는 토스트 메시지를 띄워줍니다.
-
+            Toast.makeText(applicationContext, "입력하지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
             // -------------------------------------------------
         } else {
             val userInfo = UserModel(receivedInfo, ClassModel(grade, classNum))
 
             //todo : Q10. 유저 정보(userInfo)를 넣어 SetTimeActivity 로 이동해줍니다.
             // 무슨 함수를 실행해야 할까요?
-
+            goToSetTime(userInfo)
             // -------------------------------------------------
         }
     }

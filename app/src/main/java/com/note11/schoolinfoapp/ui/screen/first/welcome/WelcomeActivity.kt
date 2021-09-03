@@ -25,7 +25,7 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>(R.layout.activity_w
 
         binding.btnWelcomeStart.setOnClickListener {
             //todo : Q4. btn_welcome_start 를 눌렀을 때 SearchActivity 로 이동하게 함수를 사용해봅시다.
-
+            goToSearch()
             // -------------------------------------------------
         }
 
